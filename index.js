@@ -22,19 +22,19 @@ function TempTracker() {
     }
   };
 
-  this.getMax = function() {
+  this.get_max = function() {
     return max;
   };
 
-  this.getMin = function() {
+  this.get_min = function() {
     return min;
   };
 
-  this.getMean = function() {
+  this.get_mean = function() {
     return count === 0 ? null : sum / count;
   };
 
-  this.getMode = function() {
+  this.get_mode = function() {
     return count === 0 ? null : maxTempCount;
   };
 }
@@ -45,4 +45,5 @@ temp.insert(48);
 temp.insert(12);
 temp.insert(32);
 temp.insert(48);
-console.log(`Min: ${temp.getMin()}, Max: ${temp.getMax()}, Mean: ${temp.getMean()}, Mode: ${temp.getMode()}`);
+console.log(`Min: ${temp.get_min()}, Max: ${temp.get_max()}, Mean: ${temp.get_mean()}, Mode: ${temp.get_mode()}`
+);
