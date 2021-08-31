@@ -20,9 +20,13 @@ function TempTracker() {
       if (tempCounts[temperature] > tempCounts[maxTempCount])
         maxTempCount = temperature;
     }
-    console.log(
-      `Min: ${temp.get_min()}, Max: ${temp.get_max()}, Mean: ${temp.get_mean()}, Mode: ${temp.get_mode()}`
-    );
+    const minTemp = this.get_min();
+    const maxTemp = this.get_max();
+    const meanTemp = this.get_mean();
+    const modeTemp = this.get_mode();
+    
+    const appDiv = document.getElementById('app');
+    appDiv.innerHTML = `Min: ${minTemp}, Max: ${maxTemp}, Mean: ${meanTemp}, Mode: ${modeTemp}`;
   };
 
   this.get_max = function() {
