@@ -24,9 +24,9 @@ function TempTracker() {
     const maxTemp = this.get_max();
     const meanTemp = this.get_mean();
     const modeTemp = this.get_mode();
-    
+
     const appDiv = document.getElementById('app');
-    appDiv.innerHTML = `Min: ${minTemp}, Max: ${maxTemp}, Mean: ${meanTemp}, Mode: ${modeTemp}`;
+    appDiv.innerHTML = `Min: ${minTemp}<br /> Max: ${maxTemp}<br /> Mean: ${meanTemp}<br /> Mode: ${modeTemp}`;
   };
 
   this.get_max = function() {
